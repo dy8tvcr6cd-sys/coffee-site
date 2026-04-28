@@ -16,113 +16,81 @@ body {
 .container {
   max-width: 480px;
   margin: 0 auto;
-  padding: 28px 22px 80px;
-}
-
-.badge {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #666;
-  font-size: 13px;
-  margin-bottom: 24px;
+  padding: 28px 22px 100px;
 }
 
 h1 {
-  font-size: 28px;
-  line-height: 1.25;
+  font-size: 26px;
+  line-height: 1.4;
   margin: 0;
-  letter-spacing: -0.5px;
 }
 
 .subtitle {
-  margin-top: 12px;
+  margin-top: 10px;
   color: #666;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
 }
 
 .card {
-  background: #ffffff;
-  border-radius: 24px;
+  background: white;
+  border-radius: 22px;
   padding: 20px;
-  margin-top: 22px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  margin-top: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 }
-
-.roastery {
-  font-size: 13px;
-  color: #888;
-  margin-bottom: 6px;
-}
-
-.product {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.note-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.note {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 9px 11px;
-  border-radius: 999px;
-  background: #f5f5f7;
-  font-size: 13px;
-  color: #333;
-  font-weight: 600;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.jasmine { background: #f4efe6; }
-.bergamot { background: #d8e8b8; }
-.blacktea { background: #8b5e3c; }
-.silky { background: #d9d9dc; }
 
 .button {
   display: block;
   width: 100%;
-  box-sizing: border-box;
   padding: 16px;
-  margin-top: 12px;
   border-radius: 16px;
   border: none;
-  text-align: center;
-  text-decoration: none;
   font-size: 16px;
   font-weight: 700;
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .primary {
   background: #111;
-  color: #fff;
+  color: white;
 }
 
 .secondary {
-  background: #eeeeef;
+  background: #eee;
   color: #111;
 }
 
-.small-text {
-  margin-top: 18px;
+.note-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.note {
+  background: #f1f1f3;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.small {
   font-size: 13px;
   color: #888;
-  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* 하단 고정 */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  padding: 12px;
+  border-top: 1px solid #eee;
 }
 </style>
 </head>
@@ -131,40 +99,50 @@ h1 {
 
 <div class="container">
 
-  <div class="badge">KOOK COFFEE ROASTERS</div>
-
-  <h1>이 원두는<br>추출 기준이 중요합니다</h1>
+  <h1>지금 커피,<br>괜찮게 나오고 있나요?</h1>
 
   <div class="subtitle">
-    파나마 Finca Deborah의 Vivid Geisha를 로스터리 기준에 맞춰 더 안정적으로 즐길 수 있도록 정리했습니다.
+    Panama Finca Deborah Vivid Geisha
   </div>
 
+  <!-- 상태 선택 -->
   <div class="card">
-    <div class="roastery">원두</div>
-    <div class="product">
-      Panama Finca Deborah<br>
-      Vivid Geisha CM Hybrid Washed
+    <a href="brew.html" class="button primary">👍 괜찮다 → 유지하기</a>
+    <a href="fix.html" class="button secondary">😕 뭔가 이상하다 → 해결하기</a>
+  </div>
+
+  <!-- 핵심 가이드 -->
+  <div class="card">
+    <div style="font-size:13px;color:#888;">핵심 가이드</div>
+    <div style="margin-top:6px;font-weight:700;">
+      이 원두는 과하게 오래 두면 쓴맛이 올라옵니다
     </div>
+    <div class="small">
+      짧고 깔끔하게 끝내는 것이 중요합니다
+    </div>
+  </div>
+
+  <!-- 컵노트 (행동 연결) -->
+  <div class="card">
+    <div style="font-size:13px;color:#888;">컵노트</div>
 
     <div class="note-list">
-      <div class="note"><span class="dot jasmine"></span>재스민</div>
-      <div class="note"><span class="dot bergamot"></span>베르가못</div>
-      <div class="note"><span class="dot blacktea"></span>홍차</div>
-      <div class="note"><span class="dot silky"></span>실키한 질감</div>
+      <div class="note">재스민 → 온도 낮추면 더 선명</div>
+      <div class="note">베르가못 → 짧게 추출</div>
+      <div class="note">홍차 → 길어지면 무거워짐</div>
     </div>
   </div>
 
+  <!-- 정보 접근 -->
   <div class="card">
-    <a href="brew.html" class="button primary">추출 영상 / 레시피 보기</a>
-    <a href="fix.html" class="button secondary">10초 처방 보기</a>
-    <a href="info.html" class="button secondary">원두 정보 자세히 보기</a>
-    <a href="buy.html" class="button primary">구매하기</a>
+    <a href="info.html" class="button secondary">원두 정보 보기</a>
   </div>
 
-  <div class="small-text">
-    컵노트는 빠른 이해를 위한 요약입니다. 정확한 원두 정보와 가공 방식은 원두 정보 페이지에서 확인할 수 있습니다.
-  </div>
+</div>
 
+<!-- 하단 고정 구매 -->
+<div class="footer">
+  <a href="buy.html" class="button primary">구매하기</a>
 </div>
 
 </body>
