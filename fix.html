@@ -3,48 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>10초 처방</title>
+
 <style>
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f7f7f8;color:#111;}
-.container{max-width:480px;margin:0 auto;padding:28px 22px 90px;}
-h1{font-size:26px;line-height:1.3;margin:0;}
-p{font-size:15px;line-height:1.7;color:#555;}
-.card{background:#fff;border-radius:22px;padding:20px;margin-top:18px;box-shadow:0 10px 30px rgba(0,0,0,.06);}
-.button{display:block;width:100%;box-sizing:border-box;text-align:left;text-decoration:none;padding:17px;border-radius:16px;margin-top:12px;font-weight:700;border:0;background:#fff;color:#111;box-shadow:0 6px 20px rgba(0,0,0,.05);}
-.answer{background:#111;color:#fff;border-radius:18px;padding:18px;margin-top:14px;line-height:1.7;font-size:15px;}
-.nav{display:block;text-align:center;text-decoration:none;padding:16px;border-radius:16px;margin-top:18px;font-weight:700;background:#eee;color:#111;}
+body{font-family:-apple-system;padding:24px;background:#f7f7f8;}
+button{
+ width:100%;
+ padding:16px;
+ margin-top:10px;
+ border-radius:14px;
+ border:none;
+ background:white;
+ box-shadow:0 5px 15px rgba(0,0,0,0.05);
+ font-weight:600;
+}
+.result{
+ margin-top:14px;
+ background:#111;
+ color:white;
+ padding:16px;
+ border-radius:16px;
+ line-height:1.6;
+}
 </style>
 </head>
+
 <body>
-<div class="container">
 
-<h1>맛이 이상하다면<br>먼저 여기서 확인하세요</h1>
-<p>이 처방은 일반적인 기준입니다. 실제 원두별 레시피와 함께 확인하는 것이 가장 정확합니다.</p>
+<h2>어떤 문제가 있나요?</h2>
 
-<div class="card">
-  <button class="button" onclick="show('bitter')">너무 쓰다</button>
-  <button class="button" onclick="show('weak')">너무 연하다</button>
-  <button class="button" onclick="show('sour')">산미가 날카롭다</button>
-  <button class="button" onclick="show('flat')">향이 약하고 밋밋하다</button>
-  <div id="result" class="answer" style="display:none;"></div>
-</div>
+<button onclick="show('bitter')">쓴맛이 강하다</button>
+<button onclick="show('weak')">너무 연하다</button>
+<button onclick="show('sour')">산미가 날카롭다</button>
 
-<a href="brew.html" class="nav">추출 레시피 다시 보기</a>
-<a href="index.html" class="nav">← 처음으로</a>
+<div id="result" class="result" style="display:none;"></div>
 
 <script>
 function show(type){
-  const data = {
-    bitter: "쓴맛이 강하면 과추출 가능성이 있습니다. 물 온도를 1~2°C 낮추거나, 분쇄도를 조금 굵게 조정해보세요. 총 추출 시간도 10~15초 줄이는 것이 좋습니다.",
-    weak: "연하게 느껴진다면 추출이 부족했을 가능성이 있습니다. 원두 양을 1~2g 늘리거나, 분쇄도를 조금 더 가늘게 조정해보세요.",
-    sour: "산미가 날카롭다면 추출이 부족하거나 물 온도가 낮을 수 있습니다. 물 온도를 1~2°C 올리고, 첫 붓기 이후 충분히 뜸을 들여보세요.",
-    flat: "향이 약하고 밋밋하다면 원두가 충분히 열리지 않았거나 추출이 고르지 않았을 수 있습니다. 뜸 시간을 30~40초로 확보하고, 물줄기를 더 안정적으로 유지해보세요."
-  };
-  document.getElementById('result').innerText = data[type];
+  let text = '';
+
+  if(type==='bitter'){
+    text = '추출이 길어졌습니다. 물 온도를 낮추고 추출 시간을 줄이세요.';
+  }
+  if(type==='weak'){
+    text = '추출이 부족합니다. 분쇄도를 더 가늘게 하거나 원두를 늘리세요.';
+  }
+  if(type==='sour'){
+    text = '온도가 낮거나 추출이 부족합니다. 물 온도를 올려보세요.';
+  }
+
+  document.getElementById('result').innerText = text;
   document.getElementById('result').style.display = 'block';
 }
 </script>
 
-</div>
 </body>
 </html>
