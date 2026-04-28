@@ -4,26 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>원두 정보</title>
-
 <style>
-body{font-family:-apple-system;margin:0;padding:24px;}
-.card{background:#f5f5f7;padding:16px;border-radius:14px;}
-button{width:100%;margin-top:20px;padding:16px;background:#000;color:#fff;border:none;border-radius:12px;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f7f7f8;color:#111;}
+.container{max-width:480px;margin:0 auto;padding:28px 22px 80px;}
+h1{font-size:26px;line-height:1.3;margin:0;}
+p{font-size:15px;line-height:1.7;color:#555;}
+.card{background:#fff;border-radius:22px;padding:20px;margin-top:18px;box-shadow:0 10px 30px rgba(0,0,0,.06);}
+.label{font-size:13px;color:#888;margin-bottom:6px;}
+.value{font-size:15px;line-height:1.7;}
+.button{display:block;text-align:center;text-decoration:none;padding:16px;border-radius:16px;margin-top:14px;font-weight:700;}
+.primary{background:#111;color:#fff;}
+.secondary{background:#eee;color:#111;}
 </style>
 </head>
-
 <body>
+<div class="container">
 
-<h2>원두 정보</h2>
+<h1>Panama Finca Deborah<br>Vivid Geisha</h1>
+<p>KOOK COFFEE ROASTERS</p>
 
 <div class="card">
-산지: 에티오피아<br>
-가공: 워시드<br>
-로스팅: 미디엄<br><br>
-컵노트: 초콜릿 / 견과 / 산미
+  <div class="label">원두 소개</div>
+  <div class="value">
+    파나마 Chiriquí 지역 Volcán 고지대의 Finca Deborah에서 생산된 게이샤 커피입니다.
+    이 농장은 1,900m 이상 고도에 위치한 고지대 농장으로 알려져 있으며,
+    생산자는 Jamison Savage입니다.
+  </div>
 </div>
 
-<button onclick="history.back()">뒤로</button>
+<div class="card">
+  <div class="label">가공 방식</div>
+  <div class="value">
+    CM Hybrid Washed.<br><br>
+    체리 상태에서 Carbonic Maceration을 거친 뒤,
+    워시드 방식으로 마무리되는 하이브리드 프로세스입니다.
+    워시드 특유의 깨끗한 인상 위에 CM 특유의 향미 밀도와 과일감이 더해지는 구조입니다.
+  </div>
+</div>
 
+<div class="card">
+  <div class="label">기본 정보</div>
+  <div class="value">
+    국가: Panama<br>
+    지역: Volcán, Chiriquí<br>
+    농장: Finca Deborah<br>
+    생산자: Jamison Savage<br>
+    품종: Geisha<br>
+    가공: CM Hybrid Washed
+  </div>
+</div>
+
+<div class="card">
+  <div class="label">컵노트</div>
+  <div class="value">
+    재스민 · 베르가못 · 홍차 · 실키한 질감<br><br>
+    Savage Coffees의 Vivid 소개에서는 yellow peach, champagne, vanilla, jasmine, citrus flower 계열의 향미도 언급됩니다.
+  </div>
+</div>
+
+<a href="index.html" class="button secondary">← 처음으로</a>
+
+</div>
 </body>
 </html>
