@@ -3,24 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Black Diamond</title>
+<title>Finca Deborah Vivid Geisha</title>
 
 <style>
-body{font-family:-apple-system;margin:0;padding:24px;background:#fff;color:#111;}
-h1{font-size:26px;}
-button{width:100%;padding:16px;margin-top:12px;border:none;border-radius:12px;background:#000;color:#fff;}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f7f7f8;
+  color: #111;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 28px 22px 80px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  margin-top: 12px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px;
+  margin-top: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.roastery {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.product {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.notes {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  margin-top: 12px;
+  border-radius: 16px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.primary {
+  background: #111;
+  color: #fff;
+}
+
+.secondary {
+  background: #eeeeef;
+  color: #111;
+}
+
+.small-text {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.5;
+}
 </style>
 </head>
 
 <body>
 
-<h1>Black Diamond</h1>
-<p>이 원두, 대부분 추출에서 실수합니다</p>
+<div class="container">
 
-<button onclick="location.href='brew.html'">추출 방법</button>
-<button onclick="location.href='fix.html'">맛 문제 해결</button>
-<button onclick="location.href='info.html'">원두 정보</button>
-<button onclick="location.href='buy.html'">구매하기</button>
+  <div class="badge">KOOK COFFEE ROASTERS</div>
+
+  <h1>이 원두는<br>추출 기준이 중요합니다</h1>
+
+  <div class="subtitle">
+    파나마 Finca Deborah의 Vivid Geisha를 로스터리 기준에 맞춰 더 안정적으로 즐길 수 있도록 정리했습니다.
+  </div>
+
+  <div class="card">
+    <div class="roastery">원두</div>
+    <div class="product">
+      Panama Finca Deborah<br>
+      Vivid Geisha CM Hybrid Washed
+    </div>
+    <div class="notes">
+      재스민 · 베르가못 · 홍차 · 실키한 질감
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="brew.html" class="button primary">추출 영상 / 레시피 보기</a>
+    <a href="fix.html" class="button secondary">10초 처방 보기</a>
+    <a href="info.html" class="button secondary">원두 정보 보기</a>
+    <a href="buy.html" class="button primary">구매하기</a>
+  </div>
+
+  <div class="small-text">
+    이 페이지는 원두별 레시피와 정보를 제공하기 위한 QR 전용 페이지입니다.
+  </div>
+
+</div>
 
 </body>
 </html>
